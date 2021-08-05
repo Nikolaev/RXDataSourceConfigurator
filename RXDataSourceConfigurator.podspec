@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RXDataSourceConfigurator'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of RXDataSourceConfigurator.'
+  s.summary          = 'RXDataSourceConfigurator.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,18 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Convenient tool for handling of collection via RxDataSources.
                        DESC
 
   s.homepage         = 'https://github.com/Nikolaev/RXDataSourceConfigurator'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Vitaly Nikolaev' => 'vitalka.nikolaev@gmail.com' }
+  s.author           = { 'Nikolaev' => 'vitalka.nikolaev@gmail.com' }
   s.source           = { :git => 'https://github.com/Nikolaev/RXDataSourceConfigurator.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.1'
-
+  s.swift_versions = '5.0'
   s.source_files = 'RXDataSourceConfigurator/Classes/**/*'
   
   # s.resource_bundles = {
