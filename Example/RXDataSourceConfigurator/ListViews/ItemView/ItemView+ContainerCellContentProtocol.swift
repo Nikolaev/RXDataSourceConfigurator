@@ -29,7 +29,7 @@ extension ItemView: RXDSContainerConfigurable {
     }
         
     func contentInsets() -> UIEdgeInsets? {
-        .init(top: 5, left: 5, bottom: 5, right: 5)
+        .init(top: 5, left: 10, bottom: 5, right: 10)
     }
 }
 

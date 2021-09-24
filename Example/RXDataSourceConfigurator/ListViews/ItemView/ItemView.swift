@@ -24,8 +24,8 @@ class ItemView: UIView {
     }
     
     struct UIConstants {
-        static let normalBgColor = UIColor(white: 1, alpha: 1)
-        static let selectedBgColor = UIColor(white: 0.9, alpha: 1)
+        static let normalBgColor = UIColor(white: 0.9, alpha: 1)
+        static let selectedBgColor = UIColor(white: 0.8, alpha: 1)
     }
     
     var model: Model? {

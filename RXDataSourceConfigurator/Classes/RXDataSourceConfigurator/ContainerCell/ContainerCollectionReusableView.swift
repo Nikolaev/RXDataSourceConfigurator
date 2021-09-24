@@ -19,6 +19,7 @@ public class ContainerCollectionReusableView<ContentView: UIView & RXDSContainer
     
     public private(set) var disposeBag = DisposeBag()
     private var cargoInsets: UIEdgeInsets?
+    private var cargoConstraints: [NSLayoutConstraint] = []
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,15 +42,15 @@ public class ContainerCollectionReusableView<ContentView: UIView & RXDSContainer
     
     private func makeConstraints(insets: UIEdgeInsets) {
         cargoInsets = insets
-        removeConstraints(cargoView.constraints)
-        let cnstrs = [
+        NSLayoutConstraint.deactivate(cargoConstraints)
+        cargoConstraints = [
             cargoView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: insets.left),
             cargoView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -insets.right),
             cargoView.topAnchor.constraint(equalTo: self.topAnchor, constant: insets.top),
             cargoView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -insets.bottom),
         ]
-        for c in cnstrs { c.priority = .init(999) }
-        NSLayoutConstraint.activate(cnstrs)
+        cargoConstraints.forEach { $0.priority = .init(999) }
+        NSLayoutConstraint.activate(cargoConstraints)
     }
         
 }
