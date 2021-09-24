@@ -57,7 +57,7 @@ open class RXDataSourceConfigurator {
         }
     }
     
-    public func animatableDableDataSource(animation: AnimationConfiguration = .fade) -> RxTableViewSectionedAnimatedDataSource<RxSectionModel> {
+    public func animatableTableDataSource(animation: AnimationConfiguration = .fade) -> RxTableViewSectionedAnimatedDataSource<RxSectionModel> {
         return RxTableViewSectionedAnimatedDataSource<RxSectionModel>(
             animationConfiguration: animation,
             configureCell:
