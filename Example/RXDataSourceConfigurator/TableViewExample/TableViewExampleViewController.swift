@@ -48,7 +48,7 @@ class TableViewExampleViewController: UIViewController {
     }
     
     private func configure(bindings: TableViewExampleViewModel.Bindings) {
-        let dataSource = dsConfigurator.animatableDableDataSource()
+        let dataSource = dsConfigurator.animatableTableDataSource()
         bindings.cellModels
             .filterNil()
             .map({ $0 as [BaseCellModel] })
